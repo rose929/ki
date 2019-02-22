@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_Day02_1823</title>
+</head>
+<body>
+
+<script>
+
+    // typeof 方法 返回变量的数据类型
+    // console.log() 控制台打印语句
+    // console.log( typeof("123") );
+    // console.log( "我是控制台打印" );
+
+    // JS 对象
+    // 用花括号，括起来的键值对，键与值之间用：隔开，键值对之间用，隔开
+    var person = {
+        name:"小白",
+        age:20,
+        'test-test':25
+    };
+    // 访问js对象的属性通过.操作符
+    // alert(person.name);
+
+    // 带特殊符号的属性名，可以通过""或''将属性名引起来
+    // 访问含有特殊符号的属性要通过["propName"] 这样的形式去访问
+    // alert(person["test-test"]);
+    // js中访问没有定义的属性，程序运行不会报错，会提示 undefined
+    // alert(person.address);
+    // 动态给对象增加属性  Object.propName = propValue
+    person.address = "湖南省长沙市";
+    // alert(person.address);
+    // 动态的删除对象属性 通过delete关键字
+    // delete person.address
+    // alert(person.address);
+
+    // 判断对象是否有某个属性通过 in 这个关键字
+    // if ("address" in person) {
+    //     alert("OK");
+    // } else {
+    //     alert("No");
+    // }
+    // alert(person.toString());
+
+    // hasOwnProperty  判断某个属性是否是自己的 不是继承的
+    // if (person.hasOwnProperty("address")) {
+    //     alert("OK");
+    // } else {
+    //     alert("No");
+    // }
+
+    // 分支结构
+    // if语句
+    // if (判断) {
+    //     执行语句;
+    // }
+
+    // if (判断) {
+    //     执行语句;
+    // } else {
+    //     执行语句;
+    // }
+
+    // if (判断) {
+    //     执行语句;
+    // } else if(判断) {
+    //     执行语句;
+    // } else if (判断) {
+    //     执行语句;
+    // } ...
+    // else {
+    //     执行语句;
+    // }
+
+    // switch语句
+    // switch (变量) {
+    //     case 值:
+    //         执行语句;
+    //         break;
+    //     case 值:
+    //         执行语句;
+    //         break;
+    //     ...
+    //     default:
+    //         ...
+    // }
+
+    // 循环语句
+    // for(初始条件; 条件判断; 循环后语句) {
+    //     执行语句;
+    // }
+    //
+    // for(变量 in 集合) {  // 在for in 语句中 变量表示的是索引
+    //     执行语句;
+    // }
+
+    // var arr = [2, 3, 4];
+    // for (var t in arr) {
+    //     console.log(t + "|" + arr[t]);
+    // }
+
+    // while (条件) {
+    //     执行语句;
+    // }
+
+    // do {
+    //     执行语句;
+    // } while (条件);
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

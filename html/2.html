@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_Day02_1823</title>
+</head>
+<body>
+
+<input type="button" value="加法" onclick="add(4,5)"><br />
+
+<input type="button" value="加法" onclick="add2(4,5, 6, 7, 8)"><br />
+
+<input type="button" value="测试" onclick="test(4,5, 6, 7, 8)">
+
+
+<script>
+
+    // 定义函数的方式一
+    // function funName(par1, par2) {
+    //    方法体语句
+    // }
+    function add(a, b) {
+        alert(a + b);
+    }
+
+    // 定义函数的方式二
+    // 匿名函数
+    var add2 = function(a, b) {
+        var length = arguments.length;
+        for (var i = 0; i<length; i++) {
+            console.log(arguments[i]); // 控制台打印
+        }
+        // alert(a + b);
+    };
+
+    function test(a, b, ...rest) {
+        alert(rest[0]);
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

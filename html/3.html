@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印系统时间</title>
+</head>
+<body>
+
+
+<input type="text" value="" id="time" onclick="getTime()" > <br />
+<input type="button" value="停止" onclick="stop()"><br />
+
+<script>
+
+    var time = document.getElementById("time");
+
+    // 设置定时器
+    // setTimeout()
+    // 清除定时器
+    // clearTimeout()
+
+    var timeout;
+
+    function getTime() {
+        var dat = new Date(); // 当前的系统时间
+
+        // dat.getHours() // 时
+        // dat.getMinutes() // 分
+        // dat.getSeconds() // 秒
+
+        time.value = (dat.getHours() + ":" + dat.getMinutes() + ":" + dat.getSeconds());
+
+        timeout = setTimeout("getTime()", 5000);
+    }
+
+    timeout = setTimeout("getTime()", 5000);
+
+    function stop() {
+        clearTimeout(timeout);
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>

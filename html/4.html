@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>让一个元素移动起来</title>
+</head>
+<body>
+
+<!--<marquee>-->
+<!--</marquee>-->
+
+<div id="move" style="background:red; width: 200px; height: 200px; position: absolute">
+</div>
+
+<div id="move2" style="background:red; width: 200px; height: 200px; position: absolute; margin-top: 220px">
+</div>
+
+
+<script>
+    // 按照指定的周期执行方法或者表达式
+    // setInterval
+
+    var div = document.getElementById("move");
+    var div2 = document.getElementById("move2");
+    var margin = 0;
+
+
+    function moveDiv() {
+
+        margin += 10;
+
+        if (margin > 1000) {  // 超出网页的时候，重新开始
+            margin = 0;
+        }
+
+        div.style.marginLeft = (margin + "px");
+    }
+
+    setInterval("moveDiv()", 100);
+
+
+    // var count = 1;
+    // var margin2 = 0;
+    //
+    // function moveDiv2() {
+    //
+    //     count ++;
+    //     margin2 += (count * 5);
+    //     if (count > 30) {
+    //         count = 0;
+    //     }
+    //
+    //     if (margin2 > 1000) {  // 超出网页的时候，重新开始
+    //         margin2 = 0;
+    //     }
+    //
+    //     div2.style.marginLeft = (margin2 + "px");
+    // }
+
+    var target = 200;
+
+    var start = 0;
+
+    function moveDiv2() {
+
+        start = start + (target - start) / 10;   //   20  38  - 200
+
+        div2.style.marginLeft = (start + "px");
+    }
+
+    setInterval("moveDiv2()", 10);
+
+
+    function clearDiv2() {
+        start = 0;
+    }
+
+    setInterval("clearDiv2()", 2000);
+
+
+
+    // setTimeout("moveDiv()", 100);
+    // setTimeout("moveDiv()", 100);
+
+</script>
+
+</body>
+</html>
